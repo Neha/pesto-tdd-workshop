@@ -1,0 +1,65 @@
+:root{
+  --primary-color : var( --black-color);
+  --secondary-color:rgb(101, 31, 72);
+  --grey-background-color: #eee;
+  --black-color: #000;
+  --arial: Arial, Helvetica, sans-serif;
+  --lucida:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:var(--arial);
+  font-size: 100%;
+}
+
+.app{
+  width: 100vw;
+  background:var(--grey-background-color);
+  height: 100vh;
+}
+
+.app > section{
+  text-align: center;
+}
+
+header{
+  text-align: center;
+  color:var(--coral-color);
+  padding: 2rem 0;
+}
+
+a{
+  font-size: 0.7rem;
+  color:var(--black-color);
+  padding: 0.4rem;
+}
+
+button{
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  background-color:var(--primary-color);
+  border:0;
+  color: #fff;
+  border-radius: 10px;
+}
+
+button:hover{
+  background-color:var(--secondary-color);
+}
+
+p{
+  font-size: 1.7rem;
+  margin: 10px auto;
+  margin-bottom: 1rem;
+  font-family: var(--lucida);
+  width: 500px;
+}
+
+h3{
+  margin-bottom: 1.5rem;
+}
