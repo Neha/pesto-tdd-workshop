@@ -77,7 +77,7 @@ We will be learning (implemented) unit testing. We are using React Testing Libra
 
 ## How does it look in code?
 
-![](public/anatomy_code.jpg)
+![](public/anatomy-code.jpg)
 
 ## Deep dive
 
