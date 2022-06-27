@@ -74,3 +74,21 @@ We will be learning (implemented) unit testing. We are using React Testing Libra
 3. todo: To write the todo test-cases we use `test.todo()`
 
 4. skip: To skip any test-case we use `test.skip()`
+
+## How does it look in code?
+
+![](public/anatomy_code.jpg)
+
+## Deep dive
+
+We are using Jest and React-testing-library which comes default with create-react-app. If you want to install it then here are the commands:
+
+### Why React-Testing-Library?
+
+React Testing Library is using dom-testing utitlity. It provides an easy and friendly way to test the code. It has query methods which helps the users to write test-case in an easy way.
+
+The prinicipal of the React-testing-libray is "Write test cases the way your users will use the software".
+
+It means you don't need to go in all nitty-gritty but focus only on how user is going to use the software or application. Eg: for your user it doesn't matter how the API request is happening and where but what the user would be interested in data.So, your priority should be testing the data rather than getting into detail testing the API.
+
+
