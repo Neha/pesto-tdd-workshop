@@ -40,7 +40,8 @@
   },
   "devDependencies": {
     "@testing-library/user-event": "^14.2.0",
-    "@types/react": "^18.0.12"
+    "@types/react": "^18.0.12",
+    "msw": "^0.42.3"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
@@ -53,4 +54,3 @@
     ]
   }
 }
-
