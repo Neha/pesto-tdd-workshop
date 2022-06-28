@@ -113,3 +113,7 @@ The difference between `get`, `query`, and `find` is what it returns when there 
 
 `findBy*`: It returns Promise. When there is no match found then Promise will be rejected or if more than one element is found after a default timeout of 1000ms.
 
+#### Using Query Methods
+
+There are multiple query methods available to query the elements from the DOM. Eg. `getByRole`, `getByText`. If there are multiple elements then we can use `getAllByRole`, `getAllByText`.
+
