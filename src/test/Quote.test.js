@@ -1,23 +1,12 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 import Quote from '../Components/Quote/Quote';
+import server from '../Mocks/browser';
 
-test("should render Quote component", () => {
-    render(<Quote />);
-})
+beforeAll(() => server.listen());
+afterAll(() => server.close());
 
-test("should have h3 tag", () => {
-    render(<Quote />);
-    const headingTag = screen.getByRole('heading',{ level: 3});
-    expect(headingTag).toBeInTheDocument();
-})
-
-test("should have h1 tag", () => {
-    render(<Quote />);
-    const headingTag = screen.getByRole('heading', { level : 1});
-    expect(headingTag).toBeInTheDocument();
-})
-
+// For spy
 function CreateFetchMock(data){
     return function fetchStub() {
         return new Promise((resolve) => {
@@ -37,7 +26,30 @@ const mockdata= {
     "author" : "John"
 }
 
-describe("test with fetch mock", function(){
+
+test("should render Quote component", () => {
+    render(<Quote />);
+})
+
+test("should have h3 tag", () => {
+    render(<Quote />);
+    const headingTag = screen.getByRole('heading',{ level: 3});
+    expect(headingTag).toBeInTheDocument();
+})
+
+test("should have h1 tag", () => {
+    render(<Quote />);
+    const headingTag = screen.getByRole('heading', { level : 1});
+    expect(headingTag).toBeInTheDocument();
+})
+
+test("should have content", async () => {
+    render(<Quote />);
+    const quoteText = await screen.findByText('This is lovely day');
+    expect(quoteText).toBeInTheDocument();
+})
+
+describe.skip("test with fetch mock", function(){
     let spy = null;
 
     beforeEach(function(){
@@ -48,20 +60,17 @@ describe("test with fetch mock", function(){
     })
 
     test("should update quote on refresh", async () => {
-        
         render(<Quote />);
         const btn = screen.getByRole('button');
-        await act(()=>{ // any function which is changing state in react on user interaction
+        await act(() => { 
             btn.click()
         })
-
-        // not everything can't be spy local storage , session storage
         expect(spy).toBeCalledTimes(2);
         let heading = null;
         await waitFor(async ()=>{ heading = await screen.findByRole("heading",{level : 1}); })
         expect( heading.textContent ).toBe(mockdata.content);
     
-        spy.mockRestore();
+       spy.mockRestore();
     })
 })
 
