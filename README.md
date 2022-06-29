@@ -117,3 +117,8 @@ The difference between `get`, `query`, and `find` is what it returns when there 
 
 There are multiple query methods available to query the elements from the DOM. Eg. `getByRole`, `getByText`. If there are multiple elements then we can use `getAllByRole`, `getAllByText`.
 
+**getAllByRole**
+
+Here we are using `getByRole` to get the button with the `role`. This is very good way and it is one of the reason RTL (react testing library) enforce to write accessible code.
+
+![](public/queryGetByRole.jpg)
