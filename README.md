@@ -121,6 +121,17 @@ There are multiple query methods available to query the elements from the DOM. E
 
 1. Testing the component is render
 
+The first step for doing the unit testing is to make sure the component is rendering.
+In `RTL`, we have `render` method. This is different from the `Enzayme`.
+
+![](public/render.jpg)
+
+So, we have to import the render from `RTL` and then all we need to do is just use `render()`.
+
+Under the hood, `RTL` create a div (container) and append it to the `document.body` and this is where the `component` will be rendered.
+
+>> If you will create your own custom container then it won't work.
+
 2. Testing the JSX of component (HTML tags)
 
 3. Testing the content
