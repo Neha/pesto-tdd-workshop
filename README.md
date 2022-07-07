@@ -117,3 +117,21 @@ The difference between `get`, `query`, and `find` is what it returns when there 
 
 There are multiple query methods available to query the elements from the DOM. Eg. `getByRole`, `getByText`. If there are multiple elements then we can use `getAllByRole`, `getAllByText`.
 
+## Testing Scenario
+
+1. Testing the component is render
+
+2. Testing the JSX of component (HTML tags)
+
+3. Testing the content
+
+4. Testing the attributes
+
+5. Testing the events
+
+6. Snapshot testing
+
+7. Tesitng Props
+
+8. Testing API content
+
