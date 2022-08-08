@@ -24,4 +24,8 @@ test('should have click event', () => {
     fireEvent.click(buttonLabel);
     expect(handleClick).toHaveBeenCalledTimes(1);
 })
-
+test('Should match snapshot', () => {
+    const handleClick = jest.fn();
+    const {container} = render(<Button click={handleClick}/>);
+    expect(container).toMatchSnapshot()
+  });
