@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading component Should match snapshot 1`] = `
+<h1
+  className="s-20"
+>
+  Hello
+</h1>
+`;

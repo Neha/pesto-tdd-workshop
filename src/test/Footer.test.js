@@ -1,3 +1,4 @@
+import renderer from 'react-test-renderer';
 import {render, screen } from '@testing-library/react';
 import Footer from '../Components/Footer/Footer';
 
@@ -32,4 +33,10 @@ describe("Test <Footer /> component", () =>{
         expect(footer).toHaveClass('footerWrapper');
         
     })
+    it('Should match snapshot', () => {
+        const view = renderer
+        .create(<Footer />)
+        .toJSON();
+        expect(view).toMatchSnapshot()
+      });
 })

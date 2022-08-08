@@ -1,4 +1,5 @@
 import { render,screen } from "@testing-library/react";
+import renderer from 'react-test-renderer';
 import Heading from '../Components/Heading/Heading';
 
 describe("Heading component" , () => {
@@ -17,4 +18,10 @@ describe("Heading component" , () => {
         const headingContent = screen.getByRole('heading');
         expect(headingContent).toHaveClass('s-20');
     })
+    it('Should match snapshot', () => {
+        const view = renderer
+        .create(<Heading/>)
+        .toJSON();
+        expect(view).toMatchSnapshot()
+      });
 })
