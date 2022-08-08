@@ -1,6 +1,8 @@
-# 👩🏽‍💻 Pesto TDD Workshop
+# 👩🏽‍💻 ReactJS TDD Workshop
 
-This repo is used in the Pesto's TDD 1hr workshop held on 25th June 2022 at 5PM IST.
+Check my online workshops [here](Workshop.md).
+
+Feel free to follow me over [Twitter](https://twitter.com/hellonehha)
 
 ## How to run test?
 
