@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <Footer /> component Should match snapshot 1`] = `
+<footer
+  className="footerWrapper"
+>
+  <a
+    href="aboutus.html"
+  >
+    About Us
+  </a>
+  <a
+    href="contact.html"
+  >
+    Contact Us
+  </a>
+</footer>
+`;
