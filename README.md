@@ -144,7 +144,7 @@ Under the hood, `RTL` create a div (container) and append it to the `document.bo
 
 **6. Snapshot testing**
 
-Snapshot testing takes the snapshot of the component and matches everytime. If there would be any change the test will be fail and flag. Goal is to have snapshot at every release. 
+Snapshot testing takes the snapshot of the component and matches everytime. If there would be any change the test will be fail and flag. Goal is to have snapshot at every release.
 
 Once you will run the `test` commands, a `snapshot` folder will be created and will store all the snapshots of the components for which the snapshot test code is written.
 
@@ -165,8 +165,6 @@ In snapshot testing, we can either test the HTML DOM or Virtual DOM. With `react
 **Which DOM to test?**
 
 For unit, integration, and snapshot test virtual DOM. Reason is these tests are focused towards the React output rather than the HTML output.
-
-
 
 **7. Tesitng Props**
 
