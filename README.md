@@ -67,7 +67,7 @@ We will be learning (implemented) unit testing. We are using React Testing Libra
 
 ![](public/anatomy_test_case.jpg)
 
-## Oragnaize Test-cases
+## Organize Test-cases
 
 1. Describe: To organize your test-cases we put our test-cases within `describe`. This known as `test-suite`.
 
@@ -121,7 +121,7 @@ There are multiple query methods available to query the elements from the DOM. E
 
 ## Testing Scenario
 
-1. Testing the component is render
+**1. Testing the component is render**
 
 The first step for doing the unit testing is to make sure the component is rendering.
 In `RTL`, we have `render` method. This is different from the `Enzayme`.
@@ -134,17 +134,27 @@ Under the hood, `RTL` create a div (container) and append it to the `document.bo
 
 >> If you will create your own custom container then it won't work.
 
-2. Testing the JSX of component (HTML tags)
+**2. Testing the JSX of component (HTML tags)**
 
-3. Testing the content
+**3. Testing the content**
 
-4. Testing the attributes
+**4. Testing the attributes**
 
-5. Testing the events
+**5. Testing the events**
 
-6. Snapshot testing
+**6. Snapshot testing**
 
-7. Tesitng Props
+There are 2 ways through which one can do snapshot testing:
 
-8. Testing API content
+1. react-test-renderer
+
+[Example](https://github.com/Neha/pesto-tdd-workshop/blob/master/src/test/Header.test.js)
+
+2. RTL snapshot
+
+[Example](https://github.com/Neha/pesto-tdd-workshop/blob/master/src/test/Button.test.js)
+
+**7. Tesitng Props**
+
+**8. Testing API content**
 
