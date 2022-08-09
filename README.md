@@ -67,7 +67,7 @@ We will be learning (implemented) unit testing. We are using React Testing Libra
 
 ![](public/anatomy_test_case.jpg)
 
-## Oragnaize Test-cases
+## Organize Test-cases
 
 1. Describe: To organize your test-cases we put our test-cases within `describe`. This known as `test-suite`.
 
@@ -121,7 +121,7 @@ There are multiple query methods available to query the elements from the DOM. E
 
 ## Testing Scenario
 
-1. Testing the component is render
+**1. Testing the component is render**
 
 The first step for doing the unit testing is to make sure the component is rendering.
 In `RTL`, we have `render` method. This is different from the `Enzayme`.
@@ -134,17 +134,39 @@ Under the hood, `RTL` create a div (container) and append it to the `document.bo
 
 >> If you will create your own custom container then it won't work.
 
-2. Testing the JSX of component (HTML tags)
+**2. Testing the JSX of component (HTML tags)**
 
-3. Testing the content
+**3. Testing the content**
 
-4. Testing the attributes
+**4. Testing the attributes**
 
-5. Testing the events
+**5. Testing the events**
 
-6. Snapshot testing
+**6. Snapshot testing**
 
-7. Tesitng Props
+Snapshot testing takes the snapshot of the component and matches everytime. If there would be any change the test will be fail and flag. Goal is to have snapshot at every release.
 
-8. Testing API content
+Once you will run the `test` commands, a `snapshot` folder will be created and will store all the snapshots of the components for which the snapshot test code is written.
+
+There are 2 ways through which one can do snapshot testing:
+
+1. *react-test-renderer*
+
+[Example](https://github.com/Neha/pesto-tdd-workshop/blob/master/src/test/Header.test.js)
+
+2. *RTL snapshot*
+
+[Example](https://github.com/Neha/pesto-tdd-workshop/blob/master/src/test/Button.test.js)
+
+**What is the difference between the both approach?**
+
+In snapshot testing, we can either test the HTML DOM or Virtual DOM. With `react-test-renderer ` we get the virtual DOM snapshot and with `react Testing Library` we get the HTML DOM snapshot.
+
+**Which DOM to test?**
+
+For unit, integration, and snapshot test virtual DOM. Reason is these tests are focused towards the React output rather than the HTML output.
+
+**7. Tesitng Props**
+
+**8. Testing API content**
 
