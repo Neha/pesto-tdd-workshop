@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> component Should match snapshot 1`] = `
+<header
+  data-testid="heading"
+  style={
+    Object {
+      "backgroundColor": "rgb(220, 220, 220)",
+      "color": "rgb(0,0,0)",
+    }
+  }
+>
+  <h1
+    className="m-18"
+  >
+    Get a Quote
+  </h1>
+</header>
+`;
