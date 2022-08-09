@@ -6,27 +6,6 @@ import server from '../Mocks/browser';
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 
-// For spy
-function CreateFetchMock(data){
-    return function fetchStub() {
-        return new Promise((resolve) => {
-          resolve({
-            json: function json(){
-                return Promise.resolve({
-                    ...data,
-                  })
-            }
-          })
-        })
-      }
-}
-
-const mockdata= {
-    "content" : "Here is a quote",
-    "author" : "John"
-}
-
-
 test("should render Quote component", () => {
     render(<Quote />);
 })
@@ -49,7 +28,35 @@ test("should have content", async () => {
     expect(quoteText).toBeInTheDocument();
 })
 
+// test("should update content on click", async () => {
+//     render(<Quote />);
+//     const btn = screen.getByRole('button');
+//     btn.click();
+//     const quoteText = await screen.findByText('updated quote');
+//     expect(quoteText).toBeInTheDocument();
+// })
+
+
+// Example of using spy for the mocking function and API request
 describe.skip("test with fetch mock", function(){
+function CreateFetchMock(data){
+    return function fetchStub() {
+        return new Promise((resolve) => {
+          resolve({
+            json: function json(){
+                return Promise.resolve({
+                    ...data,
+                  })
+            }
+          })
+        })
+      }
+}
+
+const mockdata= {
+    "content" : "Here is a quote",
+    "author" : "John"
+}
     let spy = null;
 
     beforeEach(function(){
